@@ -60,7 +60,7 @@ const HeroSection = () => {
             className="text-sm md:text-base text-cream/70 mb-8 max-w-xl"
           >
             {t(
-              "با بیش از ۱۰ سال تجربه، به صدها دانشجوی ایرانی کمک کرده‌ایم تا با موفقیت از دفاع پایان‌نامه عبور کنند.",
+              "با بیش از ۱۰ سال تجربه، به صدها دانشجوی ایرانی کمک کرده‌ایم تا با موفقیت از پایان‌نامه خود دفاع کنند",
               "With 10+ years of experience, we've helped hundreds of Iranian students successfully defend their theses."
             )}
           </motion.p>
