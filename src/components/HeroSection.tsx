@@ -1,22 +1,28 @@
 import { useLang } from "@/contexts/LanguageContext";
+import type { ReactNode } from "react";
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.png";
 import PriceCalculator from "@/components/PriceCalculator";
 
 const HeroSection = () => {
-  const { t } = useLang();
+  const { t, lang } = useLang();
 
   return (
     <section
       id="hero"
       className="relative min-h-[90vh] flex items-center overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(135deg, #c8edd8 0%, #d6ecf5 40%, #FFFFFF 100%)",
+      }}
     >
-      {/* Background image */}
+      {/* Background image - stationery items */}
       <img
         src={heroBg}
         alt=""
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover object-center"
+        style={{ opacity: 0.85 }}
       />
 
       <div className="relative container-custom px-4 py-24 md:py-32">
@@ -30,9 +36,14 @@ const HeroSection = () => {
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4"
               style={{ color: "#1a1a2e" }}
             >
-              {t(
-                "خدمات تخصصی نگارش پایان‌نامه و مقاله ISI",
-                "Professional Academic Writing Services"
+              {lang === "fa" ? (
+                "خدمات تخصصی نگارش پایان‌نامه و مقاله ISI"
+              ) : (
+                <>
+                  <span style={{ color: "#1a1a2e" }}>Professional </span>
+                  <span style={{ color: "#2BC0B4" }}>Academic Writing </span>
+                  <span style={{ color: "#4CAF7D" }}>Services</span>
+                </>
               )}
             </motion.h1>
 
