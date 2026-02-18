@@ -18,11 +18,11 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 inset-x-0 z-50 bg-card/80 backdrop-blur-lg border-b border-border shadow-sm">
+    <nav className="fixed top-0 inset-x-0 z-50" style={{ background: "rgba(255,255,255,0.55)", backdropFilter: "blur(10px)", WebkitBackdropFilter: "blur(10px)" }}>
       <div className="container-custom flex items-center justify-between h-16 px-4">
         {/* Logo */}
         <a href="#hero" className="flex items-center gap-2">
-          <span className="text-xl font-bold text-primary">
+          <span className="text-xl font-bold" style={{ color: "#2BC0B4" }}>
             {t("پژوهش‌یار", "AcademiaPen")}
           </span>
           <span className="hidden sm:inline text-xs text-muted-foreground">
@@ -36,7 +36,8 @@ const Navbar = () => {
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-foreground/75 hover:text-accent transition-colors"
+              className="text-sm font-medium hover:text-accent transition-colors"
+              style={{ color: "#1a1a2e" }}
             >
               {item.label}
             </a>
